@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1 #{title}
+        // register form
+        form(method='POST' action='/reg')
+          div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text', placeholder='first and last' name='Name')
+          div.form-group
+            label(for='rollno') Rollno:
+            input#email.form-control(type='id', placeholder='Rollno' name='rollno')
+          div.form-group
+            label(for='DateofBirth') Dob:
+            input#favoriteBook.form-control(type='date', placeholder='DateofBirth' name='date')
+          button.btn.btn-primary(type='submit') ADD
+          button.btn.btn-primary(type='submit') UPDATE
